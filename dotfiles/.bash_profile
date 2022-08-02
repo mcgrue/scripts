@@ -119,3 +119,6 @@ set_prompt --prompt ∵
 ## end git branch thing.
 ##
 #####################
+
+eval "$(ssh-agent -s)"
+
