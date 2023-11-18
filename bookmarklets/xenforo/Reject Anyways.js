@@ -1,0 +1,1 @@
+javascript:(function() {  function clickSubmitIfNothingToDo() { var submitButton = document.querySelector('input[type="submit"][value="Process Users"]');  if (submitButton) {     submitButton.click(); } else {     alert("Submit button with the value 'Process Users' not found."); } }  clickSubmitIfNothingToDo();  })();
