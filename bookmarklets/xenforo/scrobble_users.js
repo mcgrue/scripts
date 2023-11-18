@@ -73,15 +73,29 @@ javascript:(function() {
 		}
 	}
 
+	
+	function correctPageValidator() {
+	    var expectedURL = 'https://community.gaslampgames.com/admin.php?users/moderated';
+	    var currentURL = window.location.href;
+	    
+	    if (currentURL !== expectedURL) {
+	        alert('You are on the wrong page. You will be redirected to the correct page.');
+	        window.location.href = expectedURL;
+	    } else {
+	        return true;
+	    }
+	};
 
-	rejectEverythingByDefault();
-	uncheckAllNotificationsByDefault();
-	var realWork = filterEmailsForTooManyDots(collectAllPotentiallyValidEmails());
-
-	if(realWork.length == 0) {
-		clickSubmitIfNothingToDo();
-	} else {
-		var msg = "Please manually review these emails: \n\n" + realWork.join('\n');
-		alert(msg);
+	if( correctPageValidator() ) {
+		rejectEverythingByDefault();
+		uncheckAllNotificationsByDefault();
+		var realWork = filterEmailsForTooManyDots(collectAllPotentiallyValidEmails());
+	
+		if(realWork.length == 0) {
+			clickSubmitIfNothingToDo();
+		} else {
+			var msg = "Please manually review these emails: \n\n" + realWork.join('\n');
+			alert(msg);
+		}
 	}
 })();
