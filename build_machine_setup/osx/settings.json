@@ -1,0 +1,8 @@
+// vscode local settings.json
+{
+    "window.title": "🍎 OSX - SHAMECORNER",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#176573",
+        "titleBar.inactiveBackground": "#0e3f48"
+    },
+}

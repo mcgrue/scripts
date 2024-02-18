@@ -1,0 +1,8 @@
+// vscode local settings.json
+{
+    "window.title": "🐧 LINUX_BUILD - ${rootName}",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#701f33",
+        "titleBar.inactiveBackground": "#29011b"
+    },
+}

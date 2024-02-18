@@ -1,0 +1,10 @@
+// vscode local settings.json
+{
+    "window.title": "WIN32 - ${rootName}",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#7e735f",
+        "titleBar.inactiveBackground": "#594e3a",
+        "titleBar.activeForeground": "#000000",
+        "titleBar.inactiveForeground": "#000000"
+    },
+}
