@@ -137,7 +137,7 @@ function saveLayerFoldersAsImages() {
         return;
     }
 
-    var prefix = prompt("what prefix do you want these images to be saved as? (will be saved into the same directory as the source file.)", '');
+    var prefix = prompt("what prefix do you want these images to be saved as? (will be saved into the same directory as the psd you are converting.)", '');
     if(!prefix) {
         alert("no valid prefix - aborting.");
         return;
