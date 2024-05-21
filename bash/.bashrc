@@ -1,2 +1,4 @@
 alias sys='systemctl'
-alias log='journalctl'
+log() {
+    journalctl -u $1 -f
+}
