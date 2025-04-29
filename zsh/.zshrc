@@ -1,10 +1,19 @@
-# Set up the prompt
-
 autoload -Uz promptinit
 promptinit
-prompt adam1
+
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable with dark grey color (%F{240})
+zstyle ':vcs_info:git:*' formats '%F{240}[%b]%f'
+
+# Set up the prompt with git branch and brown username
+setopt PROMPT_SUBST
+PROMPT='${vcs_info_msg_0_}%F{130}%n%f%F{166}@%m%f:%~ $ '
 
 setopt histignorealldups sharehistory
+
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
